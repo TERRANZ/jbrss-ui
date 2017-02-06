@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class AuthenticationService {
     public token: string;
+    public clientId: string;
 
     constructor(private http: Http) {
         // set token if saved in local storage
@@ -29,6 +30,7 @@ export class AuthenticationService {
                 if (token) {
                     // set token property
                     this.token = token;
+                    this.clientId = username;
 
                     // store username and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));

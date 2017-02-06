@@ -10,12 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/index';
 import { AuthenticationService, FeedService } from './_services/index';
 import { BaseRequestOptions } from '@angular/http';
+import { FeedpostsComponent } from './feedposts/feedposts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    FeedpostsComponent
   ],
   imports: [
     BrowserModule,
