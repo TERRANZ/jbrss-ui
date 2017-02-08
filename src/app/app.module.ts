@@ -26,10 +26,10 @@ import { FeedpostsComponent } from './feedposts/feedposts.component';
     routing
   ],
   providers: [
-    AuthGuard,
+    AuthGuard,    
     AuthenticationService,
     FeedService,
-    BaseRequestOptions
+    BaseRequestOptions    
   ],
   bootstrap: [AppComponent]
 })

@@ -12,6 +12,7 @@ export class AuthenticationService {
         // set token if saved in local storage
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.token = currentUser && currentUser.token;
+        this.clientId = currentUser && currentUser.username;
     }
 
     login(username: string, password: string): Observable<boolean> {        
