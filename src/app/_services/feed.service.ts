@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
  
 import { AuthenticationService } from '../_services/index';
-import { Feed } from '../_models/index';
+import { FeedsList } from '../_models/index';
  
 @Injectable()
 export class FeedService {
@@ -13,7 +13,7 @@ export class FeedService {
         private authenticationService: AuthenticationService) {
     }
  
-    getFeeds(): Observable<Feed[]> {
+    getFeeds(): Observable<FeedsList> {
         // add authorization header with jwt token
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
         let options = new RequestOptions({ headers: headers });

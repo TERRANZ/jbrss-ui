@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Feed } from '../_models/index';
-import { FeedService } from '../_services/index';
+import { FeedService, UserService } from '../_services/index';
 
 @Component({
     moduleId: module.id,
@@ -11,12 +11,13 @@ import { FeedService } from '../_services/index';
 export class HomeComponent implements OnInit {
     feeds: Feed[] = [];
 
-    constructor(private FeedService: FeedService) { }
+    constructor(private FeedService: FeedService, private UserService: UserService) { }
     ngOnInit() {
         this.FeedService.getFeeds()
-            .subscribe(feeds => {
-                this.feeds = feeds;
+            .subscribe(feedsList => {
+                this.feeds = feedsList.data;
             });
+        this.UserService.getId().subscribe(user => localStorage.setItem("uid", user.id.toString()));
     }
 
 }

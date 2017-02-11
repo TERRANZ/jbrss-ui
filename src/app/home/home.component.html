@@ -9,8 +9,8 @@
         </div>
         <a class="ui-btn" href="#feedpage" onclick="doSearch();">Поиск</a>
         <ul data-role="listview" data-inset="true" data-divider-theme="b" id="feeds">
-             <li *ngFor="let feed of feeds">{{feed.feedname}} {{feed.feedurl}}</li>
+            <li *ngFor="let feed of feeds"><a [routerLink]="['/feed/',feed.id]"> {{feed.feedname}} {{feed.feedurl}}</a></li>
         </ul>
     </div>
-     <p><a [routerLink]="['/login']">Logout</a></p>
+    <p><a [routerLink]="['/login']">Logout</a></p>
 </div>

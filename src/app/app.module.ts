@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/index';
-import { AuthenticationService, FeedService } from './_services/index';
+import { AuthenticationService, FeedService, FeedPosts, UserService } from './_services/index';
 import { BaseRequestOptions } from '@angular/http';
 import { FeedpostsComponent } from './feedposts/feedposts.component';
 
@@ -29,7 +29,9 @@ import { FeedpostsComponent } from './feedposts/feedposts.component';
     AuthGuard,
     AuthenticationService,
     FeedService,
-    BaseRequestOptions
+    BaseRequestOptions,
+    FeedPosts,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

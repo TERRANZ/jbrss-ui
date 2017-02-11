@@ -1,8 +1,10 @@
-<!-- main app container -->
-<div class="jumbotron">
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
-        <div class="col-sm-8 col-sm-offset-2">
-            <router-outlet></router-outlet>
-        </div>
+        <a class="navbar-brand">Angular Router</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+        </ul>
     </div>
-</div>
+</nav>
+
+ <router-outlet></router-outlet>
