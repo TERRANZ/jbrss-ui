@@ -9,7 +9,7 @@
         </div>
         <a class="ui-btn" href="#feedpage" onclick="doSearch();">Поиск</a>
         <ul data-role="listview" data-inset="true" data-divider-theme="b" id="posts">
-            <li *ngFor="let post of posts">{{post.posttitle}}</li>
+            <div *ngFor="let post of posts">{{post.posttitle}}<br/>{{post.posttext}}<br/><a href={{post.postlink}}>link</a><hr></div>
         </ul>
     </div>
     <p><a [routerLink]="['/login']">Logout</a></p>
