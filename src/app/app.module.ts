@@ -11,13 +11,15 @@ import { AuthGuard } from './_guards/index';
 import { AuthenticationService, FeedService, FeedPosts, UserService } from './_services/index';
 import { BaseRequestOptions } from '@angular/http';
 import { FeedpostsComponent } from './feedposts/feedposts.component';
+import { AddPageComponent } from './addpage/addpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    FeedpostsComponent
+    FeedpostsComponent,
+    AddPageComponent
   ],
   imports: [
     BrowserModule,
