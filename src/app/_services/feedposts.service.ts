@@ -20,7 +20,7 @@ export class FeedPosts {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
         let options = new RequestOptions({ headers: headers });        
         // get users from api
-        return this.http.get('/rss/feed/' + id + '/list', options)
+        return this.http.get('/rss/' + localStorage.getItem("uid") + '/feed/' + id + '/list', options)
             .map((response: Response) => response.json());
     }
 }

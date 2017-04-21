@@ -16,6 +16,6 @@ export class FeedService {
         // add authorization header with jwt token
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
         let options = new RequestOptions({ headers: headers });
-        return this.http.get('/rss/feed', options).map((response: Response) => response.json());
+        return this.http.get('/rss/' + localStorage.getItem("uid") + '/feed', options).map((response: Response) => response.json());
     }
 }

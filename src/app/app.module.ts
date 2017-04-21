@@ -35,8 +35,7 @@ import { APP_BASE_HREF } from '@angular/common';
     FeedService,
     BaseRequestOptions,
     FeedPosts,
-    UserService,
-    [{provide: APP_BASE_HREF, useValue: '/jbrss'}]
+    UserService
   ],
   bootstrap: [AppComponent]
 })
