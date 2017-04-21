@@ -12,6 +12,8 @@ import { AuthenticationService, FeedService, FeedPosts, UserService } from './_s
 import { BaseRequestOptions } from '@angular/http';
 import { FeedpostsComponent } from './feedposts/feedposts.component';
 import { AddPageComponent } from './addpage/addpage.component';
+import { Component } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,13 @@ import { AddPageComponent } from './addpage/addpage.component';
     routing
   ],
   providers: [
-    AuthGuard,    
+    AuthGuard,
     AuthenticationService,
     FeedService,
     BaseRequestOptions,
     FeedPosts,
-    UserService
+    UserService,
+    [{provide: APP_BASE_HREF, useValue: '/jbrss'}]
   ],
   bootstrap: [AppComponent]
 })
